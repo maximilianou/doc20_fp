@@ -13,4 +13,17 @@ services:
     environment:
       - NODE_ENV=development
 
+  articles_front: 
+    container_name: articles_front
+    build: 
+      context: ./articles/.
+      dockerfile: Dockerfile 
+    volumes:
+      - './articles:/opt/app'
+      - './articles/node_modules:/opt/app/node_modules'
+    ports:
+      - '3344:3000'
+    environment:
+      - NODE_ENV=development
+
 
