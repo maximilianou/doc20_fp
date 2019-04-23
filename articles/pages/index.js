@@ -1,10 +1,8 @@
 //import Link from 'next/link'
 //import Header from '../comps/Header';
-import Layout from '../comps/MyLayout';
-const Index = () => (
-  <Layout >
-     <p>One Article Index</p>
-  </Layout>
-)
+//import Layout from '../comps/MyLayout';
+import withLayout from '../comps/MyLayout'
 
-export default Index;
+const Index = () => <p>One Article Index</p> 
+
+export default withLayout(Index)

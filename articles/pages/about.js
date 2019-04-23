@@ -1,11 +1,5 @@
-import Layout from '../comps/MyLayout'
+import withLayout from '../comps/MyLayout'
 
-const About = () => {
-  return (    
-        <Layout>
-            <p>About Articles Next</p>
-        </Layout>
-  )
-}
+const About = () =>  <p>About Articles Next</p>
 
-export default About;
+export default withLayout(About)
