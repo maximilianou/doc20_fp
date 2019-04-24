@@ -4,7 +4,7 @@
 
 ### First, create an empty reposotory 
 
-#### Functional Programming in Javascript the point now.
+#### Functional Programming in Javascript is the focus in this guide.
 
 Using bitbucket, and git clone localy.
 
