@@ -1,8 +1,11 @@
-//import Link from 'next/link'
-//import Header from '../comps/Header';
-//import Layout from '../comps/MyLayout';
 import withLayout from '../comps/MyLayout'
-
-const Index = () => <p>One Article Index</p> 
-
+import { withRouter } from 'next/router'
+const Routing = withRouter( props =>  ( <h1>{props.router.query.title}</h1> ) )
+const Index = () => 
+    (
+      <div>
+        <Routing />
+        <p>One Article Index</p> 
+      </div>
+    ) 
 export default withLayout(Index)
