@@ -33,6 +33,7 @@ educacion@family:~/src/doc20_fp$ npx create-react-app products
 ```
 
 Create a Dockerfile
+
 Use node official, and using node user inside the docker container.
 
 ```
@@ -48,8 +49,11 @@ CMD ["npm", "run", "start"]
 ```
 
 Creating the docker-compose.yml
+
 Creating this composer will help running multiple services.
+
 One service as starting point.
+
 ( Here is hardcoded the port inside the docker-compose,
   and this configuration have to be in the .env,
   to run in stage or testing or production environment )
@@ -73,7 +77,10 @@ services:
 ```
 
 Now run the docker-compose, 
-this have to build the docker image, to rebuild use docker-compose build only if needed.
+
+this have to build the docker image, 
+
+to rebuild use docker-compose build only if needed.
 
 
 ```
@@ -85,6 +92,7 @@ educacion@family:~/src/doc20_fp$ docker-compose down
 #### Conclusion
 
 This are the minimal steps to start using react, in an environment. 
+
 Here trying to write down Functional Programming Code.
 
 
@@ -233,6 +241,7 @@ const Header = () => (
 export default Header
 ```
 Using the FP React Layout option, 
+
 a function to compose the content into the layout
 
 ```
@@ -281,6 +290,7 @@ It seems that FP simplifies the code, specialy for maintenance and scalability
 ### Routing with NextJS in FP React Components
 
 Here we have the router of next.
+
 Using FP seems to be clear, and uncoupled!
 
 ```
@@ -306,7 +316,9 @@ educacion@family:~/src/doc20_fp$ curl http://localhost:3344/?title=Running%20wit
 ```
 
 In this part, looking at the official tutorial, 
-it's maskaring the path, 
+
+it's cleaning the path, 
+
 to clean CGI url parameters
 
 ```
