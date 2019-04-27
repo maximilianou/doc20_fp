@@ -1,29 +1,15 @@
 version: '3.7'
 services:
-  fp_front: 
-    container_name: fp_front
+  react_16_front: 
+    container_name: react_16_front
     build: 
-      context: ./products/.
+      context: ./students/.
       dockerfile: Dockerfile 
     volumes:
-      - './products:/opt/app'
-      - './products/node_modules:/opt/app/node_modules'
+      - './students:/opt/app'
+      - './students/node_modules:/opt/app/node_modules'
     ports:
-      - '3333:3000'
+      - '3350:3000'
     environment:
       - NODE_ENV=development
-
-  articles_front: 
-    container_name: articles_front
-    build: 
-      context: ./articles/.
-      dockerfile: Dockerfile 
-    volumes:
-      - './articles:/opt/app'
-      - './articles/node_modules:/opt/app/node_modules'
-    ports:
-      - '3344:3000'
-    environment:
-      - NODE_ENV=development
-
 
