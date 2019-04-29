@@ -34,7 +34,7 @@ const App = () => {
       <h2> CRUD App with Hooks </h2>
       <div className="flex-row">
         { editing ? (
-          <div> 
+          <div className="flex-large"> 
             <h2> Edit User </h2>
             <EditUserForm 
               editing={editing}
