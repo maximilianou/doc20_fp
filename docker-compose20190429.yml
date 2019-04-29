@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  react_16_front: 
+    container_name: react_16_front
+    build: 
+      context: ./students/.
+      dockerfile: Dockerfile 
+    volumes:
+      - './students:/opt/app'
+      - './students/node_modules:/opt/app/node_modules'
+    ports:
+      - '3350:3000'
+    environment:
+      - NODE_ENV=development
+

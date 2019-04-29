@@ -16,6 +16,7 @@ const App = () => {
     setUsers( [ ...users, user ] );
   };
   const delUser = ( uid ) => {
+      setEditing(false)
       setUsers( users.filter( user => user.id !== uid ) )
   };
   const [ editing, setEditing ] = useState(false);
