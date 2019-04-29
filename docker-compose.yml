@@ -1,15 +1,15 @@
 version: '3.7'
 services:
-  react_ctx_16_front: 
-    container_name: react_ctx_16_front
+  react_router_16_hooks: 
+    container_name: react_router_16_hooks
     build: 
-      context: ./users/.
+      context: ./router_sample_hooks/.
       dockerfile: Dockerfile 
     volumes:
-      - './users:/opt/app'
-      - './users/node_modules:/opt/app/node_modules'
+      - './router_sample_hooks:/opt/app'
+      - './router_sample_hooks/node_modules:/opt/app/node_modules'
     ports:
-      - '3360:3000'
+      - '3370:3000'
     environment:
       - NODE_ENV=development
 
