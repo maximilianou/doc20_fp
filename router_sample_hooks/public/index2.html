@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            div {
+                padding: 5px;
+                border-radius: 5px;
+                background-color: #EEEEEE;
+            }
+            #uno {
+                background-color: #AAAAAA;
+            }
+            p {
+                padding: 5px;
+                border-radius: 5px;
+                margin: 2px;
+                background-color: #999999;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+        <p>Ok
+        </p>
+        <div id='uno'></div>
+        <div id='dos'></div>
+        </div>
+        <script>
+            const show = ( { id = '#uno', content } ) => {
+                const templ = `<p>${content}</p>`;
+                document.querySelector(id).innerHTML += templ ;
+            }
+            show( { id: '#uno', content: "Showing content 11 " } );
+            show( { id: '#uno', content: "Showing content 22" } );
+            show( { id: '#uno', content: "Showing content 33 " } );
+            const moreData = [
+              { id: '#dos', content: "Showing content 555 " },
+              { id: '#dos', content: "Showing content 000 " },
+              {             content: "Showing content 987 " },
+              { id: '#dos', content: "Showing content 111 " }
+            ];
+            moreData.map(show);
+        </script>
+    </body>
+</html>
