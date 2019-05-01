@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  react_router_16_hooks: 
+    container_name: react_router_16_hooks
+    build: 
+      context: ./router_sample_hooks/.
+      dockerfile: Dockerfile 
+    volumes:
+      - './router_sample_hooks:/opt/app'
+      - './router_sample_hooks/node_modules:/opt/app/node_modules'
+    ports:
+      - '3370:3000'
+    environment:
+      - NODE_ENV=development
+
