@@ -2,7 +2,6 @@ import React from 'react';
 import Products from './Products';
 import Cart from './Cart';
 import ProductFrom from './ProductFrom';
-
 const App = () => {
   return (
     <div className="App">
@@ -12,9 +11,7 @@ const App = () => {
         <ProductFrom />
         <Cart />
       </div>
-
     </div>
   );
 }
-
 export default App;

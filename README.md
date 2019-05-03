@@ -368,6 +368,149 @@ Tool: https://codepen.io/maximilianou/pen/rgBWJy
 
 ![image done in codepen and printscreen](img/shoppingcart20190502.png "Starting Layout in codepen, this image is a working progress tool")
 
+#### Starting the react proyect
+
+```bash
+educacion@family:~/src/doc20_fp$ npx create-react-app shopping_react_2019
+```
+
+```bash
+educacion@family:~/src/doc20_fp$ cat shopping_react_2019/Dockerfile 
+FROM node
+RUN mkdir -p /opt/app
+WORKDIR /opt/app
+COPY . /opt/app
+RUN chown -R node:node /opt/app
+USER node
+CMD ["npm", "run", "start"]
+```
+
+```bash
+educacion@family:~/src/doc20_fp$ cat docker-compose.yml 
+version: '3.7'
+services:
+  shopp_react_2019: 
+    container_name: shopp_react_2019
+    build: 
+      context: ./shopping_react_2019/.
+      dockerfile: Dockerfile 
+    volumes:
+      - './shopping_react_2019:/opt/app'
+      - './shopping_react_2019/node_modules:/opt/app/node_modules'
+    ports:
+      - '3390:3000'
+    environment:
+      - NODE_ENV=development
+```
+
+#### Layout passed to the react proyect
+
+```js
+educacion@family:~/src/doc20_fp$ cat shopping_react_2019/src/index.js 
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+ReactDOM.render(<App />, document.querySelector('#root'));
+```
+
+```js
+educacion@family:~/src/doc20_fp$ cat shopping_react_2019/src/App.js 
+import React from 'react';
+import Products from './Products';
+import Cart from './Cart';
+import ProductFrom from './ProductFrom';
+const App = () => {
+  return (
+    <div className="App">
+      <header><h1>Shopping Cart React 2019 ( like redux )</h1></header>
+      <div class='container'>
+        <Products />
+        <ProductFrom />
+        <Cart />
+      </div>
+    </div>
+  );
+}
+export default App;
+```
+
+```js
+educacion@family:~/src/doc20_fp$ cat shopping_react_2019/src/Products.js 
+import React from 'react'
+const Products = () => (
+  <section class='product_list'>
+    <article class='product_item'>Tomato 50 +</article>
+    <article class='product_item'>Radish 60 +</article>
+    <article class='product_item'>Carrot 70 +</article>
+    <article class='product_item'>Beet 80 +</article>
+  </section>
+)
+export default Products;
+```
+
+```js
+educacion@family:~/src/doc20_fp$ cat shopping_react_2019/src/ProductFrom.js 
+import React from 'react';
+const ProductFrom = () => (
+  <section class='form_input'>
+    <form >
+      <label>Name
+        <input type='text' />
+      </label>
+      <label>Desc
+        <textarea ></textarea>
+      </label>
+    </form>
+  </section>
+)
+export default ProductFrom;
+```
+
+```js
+educacion@family:~/src/doc20_fp$ cat shopping_react_2019/src/Cart.js 
+import React from 'react';
+const Cart = () => (
+    <section class='shopping_cart'>
+    <article class='cart_item'>Carrot -</article>
+    <article class='cart_item'>Tomato -</article>
+    <article class='cart_item'>Radish -</article>
+  </section>
+)
+export default Cart;
+```
+
+```css
+/* ... */
+.container{
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(3, 1fr); 
+}
+.product_list{
+  grid-column-start: 1; 
+  grid-column-end: 3; 
+  grid-row-start: 1; 
+  grid-row-end: 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+}
+  .form_input{
+  grid-column-start: 3; 
+  grid-column-end: 3; 
+  grid-row-start: 1; 
+  grid-row-end: 2;   
+}
+.shopping_cart{
+  grid-column-start: 3; 
+  grid-column-end: 3; 
+  grid-row-start: 2; 
+  grid-row-end: 3;   
+}
+/* ... */
+```
+
 
 
 ##### to be continued.. 
