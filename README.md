@@ -362,7 +362,9 @@ I'll try to complete, this step by step, for a functional example solution to ha
 
 #### Starting shopping cart layout, first steps
 
-https://codepen.io/maximilianou/pen/rgBWJy
+Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+
+Tool: https://codepen.io/maximilianou/pen/rgBWJy
 
 ![image done in codepen and printscreen](img/shoppingcart20190502.png "Starting Layout in codepen, this image is a working progress tool")
 

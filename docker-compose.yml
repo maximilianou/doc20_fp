@@ -1,15 +1,15 @@
 version: '3.7'
 services:
-  react_context_2019: 
-    container_name: react_context_2019
+  shopp_react_2019: 
+    container_name: shopp_react_2019
     build: 
-      context: ./tasks/.
+      context: ./shopping_react_2019/.
       dockerfile: Dockerfile 
     volumes:
-      - './tasks:/opt/app'
-      - './tasks/node_modules:/opt/app/node_modules'
+      - './shopping_react_2019:/opt/app'
+      - './shopping_react_2019/node_modules:/opt/app/node_modules'
     ports:
-      - '3380:3000'
+      - '3390:3000'
     environment:
       - NODE_ENV=development
 
