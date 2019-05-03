@@ -364,9 +364,7 @@ I'll try to complete, this step by step, for a functional example solution to ha
 
 https://codepen.io/maximilianou/pen/rgBWJy
 
-![one screen](https://bitbucket.org/maximilianou/doc20_fp/raw/06ced850e38721ba4aeb06797f7edb5f245c72bd/img/shoppingcart20190502.png "Starting Layout")
-
-![one screen](img/shoppingcart20190502.png "Starting Layout")
+![image done in codepen and printscreen](img/shoppingcart20190502.png "Starting Layout in codepen, this image is a working progress tool")
 
 
 
