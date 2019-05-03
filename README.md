@@ -366,7 +366,7 @@ https://codepen.io/maximilianou/pen/rgBWJy
 
 ![one screen](https://bitbucket.org/maximilianou/doc20_fp/raw/06ced850e38721ba4aeb06797f7edb5f245c72bd/img/shoppingcart20190502.png "Starting Layout")
 
-![one screen](raw/06ced850e38721ba4aeb06797f7edb5f245c72bd/img/shoppingcart20190502.png "Starting Layout")
+![one screen](img/shoppingcart20190502.png "Starting Layout")
 
 
 
