@@ -356,9 +356,9 @@ But nextjs have something.. like library dependency, an library learning.. code 
 I'll try to complete, this step by step, for a functional example solution to have.
 
 
-.. to be continued
-
 ### React like Redux, Context Api Reducer
+
+( here i left next and redux, there is a simple way, up to now )
 
 #### Starting shopping cart layout, first steps
 
